@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*{
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  width: 100%;
+  height: 700px;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+  color: grey;
+  background: yellow;
+}
+
+.alta-cliente{
+  width: 70%;
+  height: 600px;
+  margin-top: 10%;
+  /*para alinear el contenedor en el centro, propiedad en el padre*/
+  text-align: center;
+  background: whitesmoke;
+  
+}
+.alta-cliente section{
+  /*para alinear el contenedor en el centro, propiedad en el hijo*/
+  display: inline-block; 
+}
+label{
+  /*he usado "float:left" para linear solo esta etiqueta a la izqda, ya que he definido en el padre que me alinee el contenedor princial en el centro de mi página*/
+  float: left;
+  /*background: rosybrown;*/
+  margin-top: 13px;
+}
+input{
+  border: none;
+  /*border-bottom: grosor del borde (equivalente a=border-bottom-width), solido y color gris*/
+  border-bottom: 2px solid grey;
+  /*tamaño de la letra dentro del contenedor input*/
+  font-size: x-large;
+  margin-top: 1px;
+}
+
+.alta-cliente__cuadro{
+  background: whitesmoke;
+ 
+}
+.alta-cliente__etiqueta-condiciones{
+  font-size: large;
+  /*background: salmon;*/
+
+}
+
+
+.alta-cliente__enviar{
+  text-decoration: none;
+  padding: 20px 45px;
+  background:yellowgreen;
+  border: 0;
+  border-radius:15px;
+  margin-top: 25px;
+  color: white;
+}
+
+
+
+
+

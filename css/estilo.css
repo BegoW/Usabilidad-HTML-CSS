@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Clear - finalizar la flotación. Con esta propiedad, podremos restaurar el flujo normal del documento.*/
+.clearfix{
+  clear: both;
+}
+body{
+  width: 100%;
+  height: 1400px;
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  color: grey;
+}
+.header{
+  width: 100%;
+  height: 4%;
+}
+.header h1{
+  padding-left: 5%;
+  color:rgb(78, 78, 78);
+}
+h1{
+  color:rgb(78, 78, 78);
+}
+/*.header__img{
+  width: 100%;
+  height: 100%;
+}*/
+
+/*---ESTILOS DEL NAVEGADOR DESPLEGABLE HORIZONTAL-VERTICAL---*/
+.menu{
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.menu__principal{
+  position: absolute;
+  top: 7.5%;
+  right: 6%;
+}
+.menu li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  width: auto;
+  color:rgb(78, 78, 78);
+}
+.menu li a:hover {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.menu ul li {
+  list-style: none;
+}
+/*las etiquetas li justo siguientes del menu*/
+.menu__principal > li{
+  float: left;
+  width: auto;
+}
+/*ESTO NO HACE LO MISMO QUE LO ANTERIOR-BUSCAR PORQUÉ
+  .menu__principal li{
+  float: left;
+  width: auto;
+}*/
+/*.menu__sub > li{
+  float: left;
+  width: auto;
+}*/
+.menu li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+/*el símbolo ">" significa que sean directos*/
+.menu li:hover > ul{
+  display: block;
+} 
+.menu li ul li {
+  position: relative;
+}
+/*le restamos la misma medida que el min-with de arriba*/
+.menu li ul li ul{
+  right: -140px;
+  top: 0px;
+}
+
+/*---ESTILO DE LA FOTO PRINCIPAL---*/
+.principal{
+  width: 100%;
+  height: 12%;
+  /*para centrar los elementos que están en coontenedores div
+  text-align: center;*/
+  background: hotpink;
+  /*IMPORTANTE*/
+  display: flex;
+  /*align-items: center;*/
+  
+
+}
+
+.principal__titulos{
+  color:rgb(78, 78, 78);
+  padding-left: 5%;
+ 
+  background: floralwhite;
+}
+
+.principal__promocion {
+  margin-left: 2%;
+  padding-top: 3%;
+  background: forestgreen;
+}
+.principal__promocion section{
+
+  /*PENDIENTE DE MIRAR COMO LO HACE*/
+  display: inline-block;
+  
+}
+.botonValidar-promo{
+  text-decoration: none;
+  padding: 20px 45px;
+  background:red;
+  border: 0;
+  border-radius:15px;
+  /*margin-top: 25px;*/
+  color: white;
+  /*tamaño de la letra del boton, otras medidas pueden ser: rem, px*/
+  font-size: x-large;
+}
+.text-codigo{
+  /*padding-top: 5px;*/
+  /*tamaño de la letra dentro del contenedor input*/
+  font-size: x-large;
+  border-radius: 5px;
+}
+
+
+/*---ESTILOS CUERPO PRINCIPAL (MAIN) ---*/
+.main{
+  width: 67%;
+  height: 1000px;
+  padding: 4%;
+  background-color: cadetblue;
+  float: left;
+}
+
+/*todos los elementos section del main(formulario principal que tengan de ancho el 100%)*/
+.main section{
+  width: 100%;
+}
+
+/*Para centrar los elementos en la "section1-formulario" hemos convertido los elementos del contenedor hijo (div) block en inline, de manera = display:inline-block y el en contenedor padre especificamos text-align:center, que centrará sus elementos en el centro.*/
+.main__section1-formulario{
+  /*Alinea sus elementos en el centro*/
+  text-align: center;
+  background-color: fuchsia;
+  height: 500px;
+}
+.main__section1-formulario div{
+  /*Importante para centrar*/
+  display: inline-block;
+  /*width: 40%;*/
+  width: 20%;
+  height: 25%;
+  /*valor arriba-abajo izda-der
+  margin: 1% 7%;*/
+  /*arriba-derecha-abajo-izda*/
+  margin: 2.5% 7% 1% 7%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding-top: 3%;
+ 
+}
+
+.main__section1-formulario a{
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid greenyellow;
+  border-radius: 15px;
+}
+
+/*cuando pinchamos en el enlace, dejar marcado el boton
+.main__section1-formulario a:hover {
+  background-color: whitesmoke;
+ 
+}*/
+
+/*Utilizamos (a:focus) para seleccionar el tipo de Pizza y que quede marcada la opción*/
+.main__section1-formulario a:focus{
+  background-color: palevioletred;
+}
+
+.main__section2-formulario{
+  float: left;
+  height: 175px;
+  display: block;
+  background-color: whitesmoke;
+  
+}
+.main__section2-formulario fieldset{
+  width: 30%;
+  height: 90%;
+  margin-left: 35%;
+  background-color:whitesmoke;
+  /*border:none;*/
+  /*border-top-color:1px grey;*/
+  border-radius: 10px;
+}
+.main__section2-formulario p{
+  /*arriba-(derecha/izda)-abajo*/
+  margin: 8px 10px 4px;
+}
+/*estilo del listado del tipo de masa*/
+.main__section2-formulario p select{
+  color:rgb(78, 78, 78);
+  border-radius: 5px;
+  font-size: large;
+  /*background: salmon;*/
+}
+
+
+
+/*pendiente de mirar medidas*/
+.main__section3-formulario{
+  /*width: 100%;*/
+  height: 100px;
+  float: left;
+  /*background: blue;*/
+}
+.main__section3-formulario fieldset{
+  width: 55%;
+  margin-top: 10px;
+  margin-left: 25%;
+  border:none;
+  
+}
+.main__section3-formulario p{
+  display: inline-block;
+  /*arriba-(der/izda)-abajo*/
+  margin: 13px 10px 10px;
+ 
+}
+
+.main__section4-formulario{
+  height: 100px;
+  float: left;
+  /*background: green;*/
+}
+.main__section4-formulario div{
+  margin-left: 25%;
+}
+
+.main__section4-formulario textarea{
+  margin-top: 5px;
+  border-radius: 10px;
+
+}
+
+.main__section5-formulario{
+  height: auto;
+  float: left;
+  background:red;
+}
+.main__section5-formulario button{
+  width: 50%;
+  /*para centrar el boton debemos indicar 1º display:block y después poner de forma automática los márgenes*/
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+
+
+/*---ESTILOS COLUMNA VERTICAL---*/
+.aside-register{
+  width: 20%;
+  height: 500px;
+  float: right;
+  /*valores del padding orden: arriba(top)-derecha(right)-abajo(bottom)-izqda(left)*/
+  padding: 4% 4% 4% 1%;
+  background-color: yellowgreen;
+}
+
+/*.aside-register input{
+  border: none;
+tamaño de la letra dentro del contenedor input
+  font-size: large;
+  border-bottom: 1.5px solid grey;
+  
+}*/
+.aside-register__fieldset1{
+  width: 80%;
+  height: 50%;
+  background-color: orange;
+  border-radius: 15px;
+
+}
+.aside-register__fieldset1 input{
+  border: none;
+  /*tamaño de la letra dentro del contenedor input*/
+  font-size: large;
+  border-bottom: 1.5px solid grey;
+  
+}
+.aside-register__fieldset1 P{
+  margin-top: 10px;
+  margin-left: 30px;
+  background: indianred;
+}
+
+.aside-register__fieldset1__casilla{
+  background: rosybrown;
+  /*color: red;*/
+}
+
+.aside-register__fieldset2{
+  width: 80%;
+  height: 23%;
+  margin-top: 5%;
+  border-radius: 15px;
+  background-color: beige;
+  
+}
+/*Elemento button común en la columna vertical*/
+.aside-register button{
+  /*centramos los botones de la columna vertical*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6%;
+}
+
+/*ELEMENTOS COMUNES EN TODA LA PÁGINA*/
+/*button{
+  text-decoration: none;
+  padding: 20px 45px ;
+  background:yellowgreen;
+  border: 0;
+  border-radius:15px;
+}*/ 
+/*Estilo general para todos los botones = class "boton"*/
+.boton{
+  text-decoration: none;
+  padding: 20px 45px ;
+  background:yellowgreen;
+  border: 0;
+  border-radius:15px;
+  color: white;
+  /*tamaño de la letra del boton, otras medidas pueden ser: rem, px*/
+  font-size: large;
+}
+
+
+/*---ESTILOS PIE DE PÁGINA---*/
+.footer{
+  width: 100%;
+  height: 175px;
+  float: left;
+  background: whitesmoke;
+  padding-top: 3%;
+  color:black;
+  display: flex;
+  
+
+
+}
+/*.footer div{
+  height: 120px;
+  
+}*/
+.footer__iconos-pie{
+  height: 120px;
+  padding-right: 40%;
+  font-size: 20px;
+  background: blueviolet;
+}
+.footer__iconos-pie i{
+  font-size: 45px;
+  padding-top: 10px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.footer__referencias{
+  height: 120px;
+  /*padding-left: 5%;*/
+  font-size: small;
+  
+  width: 45%;
+  /*contenedor padre de (footer__referencias section) */
+  position:relative;
+  background:blue;
+ 
+}
+
+.footer__referencias section{
+  /*text-align: right;*/
+  /*arriba-derecha-abajo-izda*/
+  /*margin: 0px 0px 10px 0px;*/
+  background: chartreuse;
+  padding: 0px;
+  /*Propiedad relacionada con su contenedor padre - Por ser contenedor hijo de (footer__referencias)*/
+  position: absolute;
+  width: 80%;
+  height: 60px;
+  left: 20%;
+  /*propiedad que define la proximidad de la parte inferior (base del contenedor hijo),
+  con la del padre base del padre -> el hijo queda"sentado" sobre el padre son ningún margen */
+  bottom: 0%;
+   
+}
+.footer__referencias a{
+  text-decoration: none;
+  color: black;
+  /*background: chartreuse;*/
+}
+
+.footer__referencias section p{
+  font-weight: bold;
+}
+
+
+
+
+
+
