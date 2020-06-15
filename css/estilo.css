@@ -129,7 +129,6 @@ h3{
   right: -140px;
   top: 0px;
 }
-
 /*---ESTILO DE LA FOTO PRINCIPAL---*/
 .principal{
   width: 100%;
@@ -143,7 +142,6 @@ h3{
   height: 115px;
   padding-top: 150px;
 }
-
 .principal__titulos{
   color:rgb(78, 78, 78);
   padding-left: 5%;
@@ -185,7 +183,6 @@ h3{
   background-color: whitesmoke;
   float: left;
 }
-
 /*LLAMO A DOS CLASES, estilos de la página de pedidos, Ojo!! hereda de main por eso la he creado para poder modificar los valores solo en la página de pedido (que decidí crearla después..)*/
 .main .main-pedido{
   width: 85%;
@@ -196,7 +193,6 @@ h3{
   float: right;
   margin-top: 0;
 }
-
 /*todos los elementos section del main(formulario principal que tengan el mismo ancho*/
 .main section{
   width: 90%;
@@ -222,7 +218,6 @@ h3{
   font-size: x-large;
   margin-right: 20px;
 }
-
 /*Para centrar los elementos en la "section1-formulario" hemos convertido los elementos del contenedor hijo (div) block en inline, de manera = display:inline-block y el en contenedor padre especificamos text-align:center, que centrará sus elementos en el centro.*/
 .main__section1-formulario{
   /*Alinea sus elementos en el centro*/
@@ -241,14 +236,11 @@ h3{
   background-color: white;
   border-radius: 10px;
   padding-top: 3%;
- 
 }
 .texto-seccion1{
   margin-top: 40px;
   color:grey;
-
 }
-
 .main__section1-formulario a{
   text-decoration: none;
   padding: 10px 15px;
@@ -256,26 +248,16 @@ h3{
   border-radius: 10px;
   color: grey;
 }
-
-/*cuando pinchamos en el enlace, dejar marcado el boton
-.main__section1-formulario a:hover {
-  background-color: whitesmoke;
- 
-}*/
-
 /*Utilizamos (a:focus) para seleccionar el tipo de Pizza y que quede marcada la opción*/
 .main__section1-formulario a:focus{
   background-color: grey;
   color: white;
-  
 }
-
 .main__section2-formulario{
   float: left;
   height: 175px;
   display: block;
   background-color: whitesmoke;
-  
 }
 .main__section2-formulario fieldset{
   width: 30%;
@@ -295,9 +277,7 @@ h3{
   color:rgb(78, 78, 78);
   border-radius: 5px;
   font-size: large;
-  /*background: salmon;*/
 }
-
 .main__section3-formulario{
   /*width: 100%;*/
   height: 100px;
@@ -310,14 +290,12 @@ h3{
   margin-left: 18%;
   border:none;
   /*background: yellow;*/
-  
 }
 .main__section3-formulario p{
   display: inline-block;
   /*arriba-(der/izda)-abajo*/
   margin: 13px 10px 10px;
 }
-
 .main__section4-formulario{
   height: 100px;
   float: left;
@@ -326,35 +304,23 @@ h3{
 .main__section4-formulario div{
   margin-left: 18%;
 }
-
 .main__section4-formulario textarea{
   margin-top: 5px;
   border-radius: 10px;
 }
-
 .main__section5-formulario{
   /*height: auto;*/
   height: 150px;
   float: left;
   /*background:red;*/
 }
-/*.main__section5-formulario button{
-  width: 50%;
-  para centrar el boton debemos indicar 1º display:block y después poner de forma automática los márgenes
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}*/
-
 .main__section6-formulario{
   height: 110px;
   float: left;
   /*padding-left: 15%;*/
   background: yellow;
   border-radius: 10px;
-  /*background:white;*/
 }
-
 .main__section6-formulario div{
   width: 70%;
   height: auto;
@@ -376,7 +342,6 @@ h3{
   border-radius: 5px;
   width: 18%;
 }
-
 /*---ESTILOS COLUMNA VERTICAL---*/
 .aside-register{
   width: 26%;
@@ -430,7 +395,6 @@ h3{
   margin-right: auto;
   margin-top: 6%;
 }
-
 /*ELEMETOS COMUNES EN LA PÁGINA*/
 .boton{
   text-decoration: none;
@@ -443,7 +407,6 @@ h3{
   font-size: large;
   margin-right: 80px;
 }
-
 .botonVolver{
   text-decoration: none;
   padding: 15px 20px;
@@ -458,7 +421,6 @@ h3{
   /*tamaño de la letra del boton, otras medidas pueden ser: rem, px*/
   font-size: large;
 }
-
 /*---ESTILOS PIE DE PÁGINA---*/
 .footer{
   width: 100%;
@@ -515,7 +477,6 @@ h3{
 .footer__referencias section p{
   font-weight: bold;
 }
-
 /*---ESTILOS PÁGINA EN CONSTRUCCIÓN---*/
 .construccion{
   width: 50%;
@@ -542,8 +503,6 @@ h3{
   color:rgb(78, 78, 78);
   font-size: 65px;
 }
-
-
 /*ESTILOS FORMULARIO ALTA*/
 /*body del formulario*/
 .body-alta-cliente{
@@ -555,7 +514,6 @@ h3{
   color: grey;
   background: whitesmoke;
 }
-
 /*contenedor principal <form>, contiene todo
 .alta-cliente{*/
 .body-alta-cliente form{
