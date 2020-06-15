@@ -1,48 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/*Realizada por Begoña Verdugo*/
 *{
   padding: 0px;
   margin: 0px;
 }
-
 /*Clear - finalizar la flotación. Con esta propiedad, podremos restaurar el flujo normal del documento.*/
-.clearfix{
+/*.clearfix{
   clear: both;
-}
+}*/
 body{
+  /*COMPROBAR PORQUE OCURRE -> cuando le especifico el tamaño fijo solo muestra parte del contenido al inspeccionar el código*/
+  /*width: 1700px;*/
   width: 100%;
-  height: 1400px;
+  /*height: 1400px;*/
+  height: 1000px;
   font-family: 'Roboto', sans-serif;
   font-size: large;
   color: grey;
+  /*PRUEBAS - mira tema responsive
+  max-width: 100vw;*/
+  background-color: whitesmoke;
+}
+/*contenedor de todo el formulario de pedido*/
+.body-pedido{
+  width: 100%;
+  height: 1100px;
+  /*padding-top: 1.5%;*/
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  color: grey;
+  background:whitesmoke;
+}
+.header-pedido{
+  height: 50px;
+  /*arriba-derecha-abajo-izda*/
+  padding:5% 10% 1% 2%;
+  background:yellow;
+}
+.header-pedido h1{
+  float: left;
+  margin-left: 4%;
+}
+.header-pedido a{
+  float: right;
+  margin-right: 25%;
+}
+.cabecera-completa{
+  /*background-color: green;*/
+  background-color: red;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  padding-top: 15px;
 }
 .header{
   width: 100%;
-  height: 4%;
+  /*height: 4%;*/
+  height: 60px;  
 }
 .header h1{
   padding-left: 5%;
+  /*color:rgb(78, 78, 78);*/
+  color: white;
+}
+h3{
   color:rgb(78, 78, 78);
 }
-h1{
-  color:rgb(78, 78, 78);
-}
-/*.header__img{
-  width: 100%;
-  height: 100%;
-}*/
-
 /*---ESTILOS DEL NAVEGADOR DESPLEGABLE HORIZONTAL-VERTICAL---*/
 .menu{
   width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: red;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  /*color: white;*/
 }
 .menu__principal{
   position: absolute;
-  top: 7.5%;
+  /*top: 7.5%;*/
+  top: 100%; 
   right: 6%;
+  background-color: red;
+
 }
 .menu li a {
   text-decoration: none;
@@ -52,8 +90,9 @@ h1{
   color:rgb(78, 78, 78);
 }
 .menu li a:hover {
-  background-color: whitesmoke;
+  background-color: grey;
   border-radius: 10px;
+  color:white;
 }
 .menu ul li {
   list-style: none;
@@ -63,7 +102,7 @@ h1{
   float: left;
   width: auto;
 }
-/*ESTO NO HACE LO MISMO QUE LO ANTERIOR-BUSCAR PORQUÉ
+/*ESTO NO HACE LO MISMO QUE LO ANTERIOR
   .menu__principal li{
   float: left;
   width: auto;
@@ -76,6 +115,7 @@ h1{
   display: none;
   position: absolute;
   min-width: 140px;
+  
 }
 /*el símbolo ">" significa que sean directos*/
 .menu li:hover > ul{
@@ -93,73 +133,101 @@ h1{
 /*---ESTILO DE LA FOTO PRINCIPAL---*/
 .principal{
   width: 100%;
-  height: 12%;
+  /*height: 12%;*/
   /*para centrar los elementos que están en coontenedores div
   text-align: center;*/
-  background: hotpink;
+  background: whitesmoke;
   /*IMPORTANTE*/
   display: flex;
   /*align-items: center;*/
-  
-
+  height: 115px;
+  padding-top: 150px;
 }
 
 .principal__titulos{
   color:rgb(78, 78, 78);
   padding-left: 5%;
- 
-  background: floralwhite;
+  height: 100px;
+  background: whitesmoke;
 }
-
+.principal__titulos-pedido{
+  color:rgb(78, 78, 78);
+  padding-left:5%;
+  height: 50px;
+  background: greenyellow;
+}
 .principal__promocion {
+  height: 75px;
   margin-left: 2%;
-  padding-top: 3%;
-  background: forestgreen;
+  padding-top: 2%;
+  background: whitesmoke;
 }
 .principal__promocion section{
-
-  /*PENDIENTE DE MIRAR COMO LO HACE*/
   display: inline-block;
-  
 }
-.botonValidar-promo{
-  text-decoration: none;
-  padding: 20px 45px;
-  background:red;
-  border: 0;
-  border-radius:15px;
-  /*margin-top: 25px;*/
-  color: white;
-  /*tamaño de la letra del boton, otras medidas pueden ser: rem, px*/
-  font-size: x-large;
+.principal__titulos-boton{
+  text-align: center;
 }
 .text-codigo{
-  /*padding-top: 5px;*/
   /*tamaño de la letra dentro del contenedor input*/
   font-size: x-large;
   border-radius: 5px;
+  width: 90%;
 }
-
-
 /*---ESTILOS CUERPO PRINCIPAL (MAIN) ---*/
 .main{
-  width: 67%;
-  height: 1000px;
-  padding: 4%;
-  background-color: cadetblue;
+  width: 68%;
+  height: 600px;
+  /*arriba-derecha-abajo-izda*/
+  /*le pongo margin-top: 5% para igualar la altura del aside, que lo he bajado para que no choque con el desplegable del navegador */
+  margin-top: 5%;
+  margin-left: 2%;
+  background-color: whitesmoke;
   float: left;
 }
 
-/*todos los elementos section del main(formulario principal que tengan de ancho el 100%)*/
+/*LLAMO A DOS CLASES, estilos de la página de pedidos, Ojo!! hereda de main por eso la he creado para poder modificar los valores solo en la página de pedido (que decidí crearla después..)*/
+.main .main-pedido{
+  width: 85%;
+  height: 1000px;
+  padding: 0;
+  /*background-color:palevioletred;*/
+  /*float: left;*/
+  float: right;
+  margin-top: 0;
+}
+
+/*todos los elementos section del main(formulario principal que tengan el mismo ancho*/
 .main section{
-  width: 100%;
+  width: 90%;
+}
+.section-main{
+  height: 60px;
+  margin-top: 1px;
+  text-align: center;
+}
+.section-main-img{
+  height: 330px;
+  text-align: center;
+}
+.section-main-img img{
+  border-radius: 10px;
+  width: 50%;
+}
+.section-main__enlace{
+  color: grey;
+}
+/*modifico los valores del botón del pedido de la foto principal*/
+.main .section-main .boton{
+  font-size: x-large;
+  margin-right: 20px;
 }
 
 /*Para centrar los elementos en la "section1-formulario" hemos convertido los elementos del contenedor hijo (div) block en inline, de manera = display:inline-block y el en contenedor padre especificamos text-align:center, que centrará sus elementos en el centro.*/
 .main__section1-formulario{
   /*Alinea sus elementos en el centro*/
   text-align: center;
-  background-color: fuchsia;
+  /*background-color: floralwhite;*/
   height: 500px;
 }
 .main__section1-formulario div{
@@ -167,22 +235,26 @@ h1{
   display: inline-block;
   /*width: 40%;*/
   width: 20%;
-  height: 25%;
-  /*valor arriba-abajo izda-der
-  margin: 1% 7%;*/
+  height: 20%;
   /*arriba-derecha-abajo-izda*/
   margin: 2.5% 7% 1% 7%;
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 10px;
   padding-top: 3%;
  
+}
+.texto-seccion1{
+  margin-top: 40px;
+  color:grey;
+
 }
 
 .main__section1-formulario a{
   text-decoration: none;
   padding: 10px 15px;
-  border: 1px solid greenyellow;
-  border-radius: 15px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  color: grey;
 }
 
 /*cuando pinchamos en el enlace, dejar marcado el boton
@@ -193,7 +265,9 @@ h1{
 
 /*Utilizamos (a:focus) para seleccionar el tipo de Pizza y que quede marcada la opción*/
 .main__section1-formulario a:focus{
-  background-color: palevioletred;
+  background-color: grey;
+  color: white;
+  
 }
 
 .main__section2-formulario{
@@ -224,9 +298,6 @@ h1{
   /*background: salmon;*/
 }
 
-
-
-/*pendiente de mirar medidas*/
 .main__section3-formulario{
   /*width: 100%;*/
   height: 100px;
@@ -234,98 +305,121 @@ h1{
   /*background: blue;*/
 }
 .main__section3-formulario fieldset{
-  width: 55%;
+  width:70%;
   margin-top: 10px;
-  margin-left: 25%;
+  margin-left: 18%;
   border:none;
+  /*background: yellow;*/
   
 }
 .main__section3-formulario p{
   display: inline-block;
   /*arriba-(der/izda)-abajo*/
   margin: 13px 10px 10px;
- 
 }
 
 .main__section4-formulario{
   height: 100px;
   float: left;
-  /*background: green;*/
+  /*background: yellow;*/
 }
 .main__section4-formulario div{
-  margin-left: 25%;
+  margin-left: 18%;
 }
 
 .main__section4-formulario textarea{
   margin-top: 5px;
   border-radius: 10px;
-
 }
 
 .main__section5-formulario{
-  height: auto;
+  /*height: auto;*/
+  height: 150px;
   float: left;
-  background:red;
+  /*background:red;*/
 }
-.main__section5-formulario button{
+/*.main__section5-formulario button{
   width: 50%;
-  /*para centrar el boton debemos indicar 1º display:block y después poner de forma automática los márgenes*/
+  para centrar el boton debemos indicar 1º display:block y después poner de forma automática los márgenes
   display: block;
   margin-right: auto;
   margin-left: auto;
-  
+}*/
+
+.main__section6-formulario{
+  height: 110px;
+  float: left;
+  /*padding-left: 15%;*/
+  background: yellow;
+  border-radius: 10px;
+  /*background:white;*/
 }
 
-
+.main__section6-formulario div{
+  width: 70%;
+  height: auto;
+  float: left;
+  /*arriba-derecha-abajo-izda*/
+  /*padding: 1.5% 0% 1% 0%;*/
+  /*padding: 1%;*/
+  /*margin-left: 140px;*/
+  margin-left: 18%;
+}
+.main__section6-formulario p{
+  /* tengo que especificar aquí el margin:0, porque hereda valores de más arriba.
+  margin-top: 2px;*/
+  margin: 0;
+}
+/*---caja de texto del código de promoción---*/
+.section6-codigo{
+  font-size: x-large;
+  border-radius: 5px;
+  width: 18%;
+}
 
 /*---ESTILOS COLUMNA VERTICAL---*/
 .aside-register{
-  width: 20%;
+  width: 26%;
   height: 500px;
-  float: right;
+  /*float: right;*/
   /*valores del padding orden: arriba(top)-derecha(right)-abajo(bottom)-izqda(left)*/
-  padding: 4% 4% 4% 1%;
-  background-color: yellowgreen;
+  padding: 1% 4% 4% 0%;
+  background-color: whitesmoke;
+  float: left;
+  /*le pongo este padding para que no se tape cuando se despliega las opciones del navegador de arriba*/
+  padding-top: 5%;
 }
-
-/*.aside-register input{
-  border: none;
-tamaño de la letra dentro del contenedor input
-  font-size: large;
-  border-bottom: 1.5px solid grey;
-  
-}*/
 .aside-register__fieldset1{
-  width: 80%;
+  width: 60%;
   height: 50%;
-  background-color: orange;
-  border-radius: 15px;
+  background-color:whitesmoke;
+  border-radius: 10px;
+
 
 }
 .aside-register__fieldset1 input{
   border: none;
   /*tamaño de la letra dentro del contenedor input*/
-  font-size: large;
+  font-size: small;
   border-bottom: 1.5px solid grey;
+  background-color:whitesmoke;
   
 }
 .aside-register__fieldset1 P{
   margin-top: 10px;
   margin-left: 30px;
-  background: indianred;
+  background:whitesmoke;
 }
-
 .aside-register__fieldset1__casilla{
-  background: rosybrown;
+  background: whitesmoke;
   /*color: red;*/
 }
-
 .aside-register__fieldset2{
-  width: 80%;
+  width: 62%;
   height: 23%;
   margin-top: 5%;
-  border-radius: 15px;
-  background-color: beige;
+  border-radius: 10px;
+  background-color:whitesmoke;
   
 }
 /*Elemento button común en la columna vertical*/
@@ -337,49 +431,49 @@ tamaño de la letra dentro del contenedor input
   margin-top: 6%;
 }
 
-/*ELEMENTOS COMUNES EN TODA LA PÁGINA*/
-/*button{
-  text-decoration: none;
-  padding: 20px 45px ;
-  background:yellowgreen;
-  border: 0;
-  border-radius:15px;
-}*/ 
-/*Estilo general para todos los botones = class "boton"*/
+/*ELEMETOS COMUNES EN LA PÁGINA*/
 .boton{
   text-decoration: none;
-  padding: 20px 45px ;
+  padding: 15px 20px;
   background:yellowgreen;
   border: 0;
-  border-radius:15px;
+  border-radius:10px;
+  color: white;
+  /*tamaño de la letra del boton, otras medidas pueden ser: rem, px*/
+  font-size: large;
+  margin-right: 80px;
+}
+
+.botonVolver{
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-left: 15px;
+  background: rgb(172, 172, 172);
+  /*background: rgb(16, 209, 16);*/
+  border: 0;
+  border-radius:10px;
+  /*margin-top: 25px;*/
+  /*color:black;*/
   color: white;
   /*tamaño de la letra del boton, otras medidas pueden ser: rem, px*/
   font-size: large;
 }
-
 
 /*---ESTILOS PIE DE PÁGINA---*/
 .footer{
   width: 100%;
   height: 175px;
   float: left;
-  background: whitesmoke;
+  background:grey;
   padding-top: 3%;
   color:black;
   display: flex;
-  
-
-
 }
-/*.footer div{
-  height: 120px;
-  
-}*/
 .footer__iconos-pie{
   height: 120px;
   padding-right: 40%;
   font-size: 20px;
-  background: blueviolet;
+  /*background: blueviolet;*/
 }
 .footer__iconos-pie i{
   font-size: 45px;
@@ -390,43 +484,123 @@ tamaño de la letra dentro del contenedor input
 .footer__referencias{
   height: 120px;
   /*padding-left: 5%;*/
-  font-size: small;
-  
+  /*font-size: small;*/
+  font-size: 14px;
   width: 45%;
   /*contenedor padre de (footer__referencias section) */
   position:relative;
-  background:blue;
- 
+  /*background:blue;*/
 }
-
 .footer__referencias section{
   /*text-align: right;*/
   /*arriba-derecha-abajo-izda*/
   /*margin: 0px 0px 10px 0px;*/
-  background: chartreuse;
+  /*background: chartreuse;*/
   padding: 0px;
   /*Propiedad relacionada con su contenedor padre - Por ser contenedor hijo de (footer__referencias)*/
   position: absolute;
-  width: 80%;
+  width: 83%;
   height: 60px;
-  left: 20%;
+  /*left: 17%;*/
+  left: 15%;
   /*propiedad que define la proximidad de la parte inferior (base del contenedor hijo),
   con la del padre base del padre -> el hijo queda"sentado" sobre el padre son ningún margen */
-  bottom: 0%;
-   
+  bottom: 4%;
 }
 .footer__referencias a{
   text-decoration: none;
   color: black;
   /*background: chartreuse;*/
 }
-
 .footer__referencias section p{
   font-weight: bold;
 }
 
+/*---ESTILOS PÁGINA EN CONSTRUCCIÓN---*/
+.construccion{
+  width: 50%;
+  height: 300px;
+  float: left;
+  margin: 9%;
+  /*para alinear el contenedor en el centro, propiedad en el padre*/
+  text-align: center;
+  border-radius: 10px;
+  background: yellow;
+}
+.construccion section{
+  padding: 4%;
+  height: 30px;
+  /*para alinear el contenedor en el centro, propiedad en el padre*/
+  text-align: center;
+  /*background: whitesmoke;*/
+}
+.construccion section a{
+  color:rgb(78, 78, 78);
+  font-size: 30px;
+}
+.construccion section i{
+  color:rgb(78, 78, 78);
+  font-size: 65px;
+}
 
 
+/*ESTILOS FORMULARIO ALTA*/
+/*body del formulario*/
+.body-alta-cliente{
+  width: 100%;
+  height: 700px;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+  /*color: color de la letra*/
+  color: grey;
+  background: whitesmoke;
+}
 
-
-
+/*contenedor principal <form>, contiene todo
+.alta-cliente{*/
+.body-alta-cliente form{
+  width: 70%;
+  height: 650px;
+  margin-top: 10%;
+  margin-left: 12%;
+  /*para alinear en el centro los contenedores hijos, propiedad en el padre*/
+  text-align: center;
+  background: whitesmoke;
+}
+/*cajas input, donde especificar los datos, nombre, telf, e-mail, contraseña*/
+.alta-cliente__cuadro{
+  border: none;
+  /*border-bottom: grosor del borde (equivalente a=border-bottom-width), solido y color gris*/
+  border-bottom: 2px solid grey;
+  /*tamaño de la letra dentro del contenedor input*/
+  font-size: x-large;
+  /*margin-top: 5px;*/
+  margin-bottom: 6px;
+  background:whitesmoke;
+}
+/*etiquetas label nombre, telf, e-mail, contraseña de las cajas input*/
+.for-section1 label{
+  float: left;
+  /*pongo esta medida para alinear justo al principio del la caja input*/
+  margin-left: 322px;
+}
+/*Etiqueta label checkbox para aceptar condiciones de uso*/
+.check-condiciones{
+  font-size: x-large;
+} 
+.boton-enviar-alta{
+  text-decoration: none;
+  padding: 20px 45px;
+  background: yellow;
+  border: 0;
+  border-radius:15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: grey;
+  font-size: x-large;
+}
+.ref-inicio{
+  text-decoration: none;
+  color: grey;
+  font-size: large;
+}

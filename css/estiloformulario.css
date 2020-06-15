@@ -9,9 +9,9 @@ body{
   font-family: 'Roboto', sans-serif;
   font-size: x-large;
   color: grey;
-  background: yellow;
+  /*background: yellow;*/
+  background: grey;
 }
-
 .alta-cliente{
   width: 70%;
   height: 600px;
@@ -19,46 +19,73 @@ body{
   /*para alinear el contenedor en el centro, propiedad en el padre*/
   text-align: center;
   background: whitesmoke;
-  
 }
+
 .alta-cliente section{
   /*para alinear el contenedor en el centro, propiedad en el hijo*/
   display: inline-block; 
+
+  margin-top: 5px;
+  background: yellowgreen;
 }
 label{
   /*he usado "float:left" para linear solo esta etiqueta a la izqda, ya que he definido en el padre que me alinee el contenedor princial en el centro de mi página*/
   float: left;
-  /*background: rosybrown;*/
+  background: rosybrown;
   margin-top: 13px;
+ 
 }
-input{
+
+/*input{
+  border: none;
+  /*border-bottom: grosor del borde (equivalente a=border-bottom-width), solido y color gris
+  border-bottom: 2px solid grey;
+  /*tamaño de la letra dentro del contenedor input
+  font-size: x-large;
+  /*margin-top: 1px;
+  margin-top: 13px;
+
+}*/
+
+/*imput*/
+.alta-cliente__cuadro{
   border: none;
   /*border-bottom: grosor del borde (equivalente a=border-bottom-width), solido y color gris*/
   border-bottom: 2px solid grey;
   /*tamaño de la letra dentro del contenedor input*/
   font-size: x-large;
-  margin-top: 1px;
-}
+  /*margin-top: 1px;*/
+  margin-top: 13px;
 
-.alta-cliente__cuadro{
-  background: whitesmoke;
+  /*float: right;*/
+  background: fuchsia;
+  /*float: left;*/
  
 }
+
 .alta-cliente__etiqueta-condiciones{
   font-size: large;
-  /*background: salmon;*/
+  background: salmon;
 
 }
-
 
 .alta-cliente__enviar{
   text-decoration: none;
   padding: 20px 45px;
-  background:yellowgreen;
+  background: yellow;
   border: 0;
   border-radius:15px;
   margin-top: 25px;
-  color: white;
+  margin-bottom: 35px;
+  color: grey;
+  font-size: x-large;
+
+}
+.ref-inicio{
+  text-decoration: none;
+  color: grey;
+  font-size: large;
+
 }
 
 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--link para fuente roboto COMPROBAR-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <!--creo un scrip para referenciar a los iconos del pié de página--> 
+  <script src="https://kit.fontawesome.com/2945f6e8da.js"></script>
+  <!--Realizada por Begoña Verdugo-->
+  <title>Solicitando pedido</title>
+</head>
+<body class="body-pedido">
+  <!--<div class="principal__titulos-pedido">-->
+  <header class="header-pedido">  
+    <p>
+      <h1>TuPIZZA ¿Comenzamos a crearla?.... <i class="fas fa-pizza-slice"></i></h1>
+    </p>
+    <p>
+      <a class ="botonVolver" href="index.html">Página principal</a>
+    </p>
+  </header>    
+  <main class="main">
+    <!--Contenedor div= main-pedido que hereda de main (estilos de la página principal)
+    Lo he tenido que poner así para que no se moviera todo el estilo del formulario de pedido-->
+    <div class="main main-pedido">
+      <!--la acción de este form enviará el pedido completo/ con el botón ENVIAR PEDIDO-->
+      <form action="index.html" method="POST">
+        <!--meter los 4 tipos de pizza-->
+        <section class="main__section1-formulario">
+          <h1>Selecciona tu tipo de Pizza</h1> <br>
+          <div>
+            <h2>PizzaTipo1</h2> <br>
+            <a href="#">Seleccionar</a><br>
+          </div>
+          <div>
+            <h2>PizzaTipo2</h2> <br>
+            <a class="seleccionar" href="#">Seleccionar</a><br>
+          </div>
+          <div>
+            <h2>PizzaTipo3</h2> <br>
+            <a class="seleccionar" href="#">Seleccionar</a><br>
+          </div>
+          <div>
+            <h2>PizzaTipo4</h2> <br>
+            <a class="seleccionar" href="#">Seleccionar</a><br>
+          </div>
+            <p class="texto-seccion1">Seguro que ya has marcado el tipo de Pizza de hoy, continuamos...</p><br>
+        </section>
+        <section class="main__section2-formulario">
+            <!--El elemento <fieldset> es una forma cómoda de crear grupos de controles de formulario (también denominados widgets) que comparten el mismo propósito, con fines semánticos y de aplicación de estilo.El contenido textual del elemento <legend> describe formalmente el propósito del elemento <fieldset> que está incluido dentro.-->
+            <fieldset>
+              <legend>Tamaño y masa de tu Pizza</legend>
+              <p>
+                <select name="masa">
+                  <option>Fina</option>
+                  <option>Normal</option>
+                  <option>Gruesa</option>
+                  <option>Rellena</option>
+                </select>
+              </p>
+              <p>
+                <input type="radio" name="size" id="size_1" value="small">
+                <label for="size_1">Pequeña</label>
+              </p>
+              <p>
+                <input type="radio" name="size" id="size_2" value="medium">
+                <label for="size_2">Mediana</label>
+              </p>
+              <p>
+                <input type="radio" name="size" id="size_3" value="large">
+                <label for="size_3">Grande</label>
+              </p>
+            </fieldset>
+        </section>
+        <section class="main__section3-formulario">
+          <fieldset>
+            <legend>Marca los ingredientes que quieras añadir.... </legend>
+            <p>
+              <input type="checkbox" id="ingredient_1" name="ingredient_mushroom" value="mushroom">
+              <label for="ingredient_1">Champiñones</label>
+            </p>
+            <p>
+              <input type="checkbox" id="ingredient_2" name="ingredient_beicon" value="beicon">
+              <label for="ingredient_2">Beicon</label>
+            </p>
+            <p>
+              <input type="checkbox" id="ingredient_3" name="ingredient_basil" value="basil">
+              <label for="ingredient_3">Albahaca</label>
+            </p>
+            <p>
+              <input type="checkbox" id="ingredient_4" name="ingredient_ananas" value="ananas">
+              <label for="ingredient_4">Piña</label>
+            </p>
+            <p>
+              <input type="checkbox" id="ingredient_5" name="ingredient_extracheese" value="extracheese">
+              <label for="ingredient_4">Extra Queso</label>
+            </p> 
+          </fieldset> 
+        </section>
+        <section class="main__section4-formulario">
+          <div>
+            <!--valor por defecto en html5 cols="20" rows="5" número de líneas visibles en el control-->
+            <label for="size_1">Añadir comentarios (no obligatorio):</label><br>
+            <textarea cols="76" rows="4"></textarea>
+          </div>
+        </section>
+        <!--<section class="main__section5-formulario">
+          <form action="index.html" method="POST">
+            <button class="boton" type="submit">ENVIAR PEDIDO</button>
+          </form>
+        </section>-->
+        <section class="main__section6-formulario">
+          <div>
+            <p class="texto-seccion1">Introduce si tienes código promocional</p><br>
+            <input class="section6-codigo" type="text" value ="">
+            <a class ="boton" href="#">Validar</a>
+            <button class="botonVolver" type="submit">ENVIAR PEDIDO</button>
+          </div>
+        </section>
+      </form> 
+    </div>
+  </main>
+</body>
+</html>
